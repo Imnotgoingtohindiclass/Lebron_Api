@@ -16,7 +16,7 @@ def get_daily_quote():
 
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to the LeBron Quotes API!"}
+    return {"message": "Welcome to the LeBron Quotes API! IT'S OUR BALL AINT IT? ITS OUR BALL"}
 
 @app.get("/daily-quote")
 def daily_quote():
