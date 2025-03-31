@@ -14,6 +14,11 @@ def get_daily_quote():
     quote_id = str(random.randint(1, 60))
     return {"id": quote_id, "quote": data.get(quote_id, "Quote not found")}
 
+@app.get("/random-quote")
+def random_quote():
+    quote_id = str(random.randint(1, len(data)))
+    return {"id": quote_id, "quote": data.get(quote_id, "Quote not found")}
+
 @app.get("/")
 def read_root():
     return {"message": "Welcome to the LeBron Quotes API! IT'S OUR BALL AINT IT? ITS OUR BALL"}
